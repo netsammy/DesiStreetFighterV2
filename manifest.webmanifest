@@ -1,0 +1,51 @@
+{
+  "name": "Desi Street Brawler",
+  "short_name": "Desi Brawler",
+  "description": "A Pakistani 2.5D action brawler with fighters, stages, keyboard controls, touch controls, and gamepad support.",
+  "id": "/DesiStreetFighterV2/",
+  "start_url": "/DesiStreetFighterV2/",
+  "scope": "/DesiStreetFighterV2/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#160904",
+  "theme_color": "#160904",
+  "categories": ["games", "action", "fighting"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/DesiStreetFighterV2/icons/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/DesiStreetFighterV2/icons/app-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/DesiStreetFighterV2/store-assets/google-play/phone-01-character-select.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Choose a fighter"
+    },
+    {
+      "src": "/DesiStreetFighterV2/store-assets/google-play/phone-02-stage-select.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Choose a stage"
+    },
+    {
+      "src": "/DesiStreetFighterV2/store-assets/google-play/phone-03-gameplay-village.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Fight in Pakistani-inspired arenas"
+    }
+  ]
+}
