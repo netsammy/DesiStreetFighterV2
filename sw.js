@@ -1,4 +1,4 @@
-const CACHE_NAME = 'desi-street-brawler-v1';
+const CACHE_NAME = 'desi-street-brawler-v2';
 const APP_SHELL = [
   '/DesiStreetFighterV2/',
   '/DesiStreetFighterV2/index.html',
@@ -27,6 +27,26 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
+
+  const url = new URL(event.request.url);
+  const shouldPreferNetwork =
+    event.request.mode === 'navigate' ||
+    url.pathname.endsWith('.html') ||
+    url.pathname.endsWith('.js') ||
+    url.pathname.endsWith('.css') ||
+    url.pathname.endsWith('/DesiStreetFighterV2/');
+
+  if (shouldPreferNetwork) {
+    event.respondWith(
+      fetch(event.request).then((response) => {
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+        return response;
+      }).catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((cached) => {
       if (cached) return cached;
