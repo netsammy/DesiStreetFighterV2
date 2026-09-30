@@ -28,9 +28,9 @@
         line-height: 1.25;
       }
       #boot-overlay.match-help {
-        top: 8px;
+        top: clamp(96px, 16vh, 120px);
         padding: 4px 9px;
-        max-width: min(440px, 44vw);
+        max-width: min(580px, calc(100vw - 28px));
         font-size: 10px;
         line-height: 1.12;
         letter-spacing: 0.04em;
@@ -62,23 +62,20 @@
       }
       @media (orientation: landscape) and (max-height: 520px) {
         #boot-overlay.match-help {
-          top: 6px;
-          max-width: min(360px, 36vw);
-          padding: 3px 8px;
-          font-size: 9px;
-          line-height: 1.12;
+          display: none !important;
         }
-        #boot-overlay.match-help .match-controls {
-          font-size: 7px;
-        }
-        #boot-overlay.match-help span {
-          font-size: 7px !important;
+        #hud-root .combat-callout {
+          top: 145px !important;
+          max-width: min(250px, 32vw) !important;
+          padding: 3px 7px !important;
+          font-size: 12px !important;
+          line-height: 1.15 !important;
         }
       }
       #ui-root { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
     </style>
-    <script type="module" crossorigin src="/DesiStreetFighterV2/assets/main-WHDVMVrS.js"></script>
-    <link rel="modulepreload" crossorigin href="/DesiStreetFighterV2/assets/characters-C_FLtQtX.js">
+    <script type="module" crossorigin src="/DesiStreetFighterV2/assets/main-BisNwvGh.js"></script>
+    <link rel="modulepreload" crossorigin href="/DesiStreetFighterV2/assets/characters-DHXrwWN5.js">
   </head>
   <body>
     <div id="game-root">

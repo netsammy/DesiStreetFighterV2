@@ -1,4 +1,4 @@
-const CACHE_NAME = 'desi-street-brawler-v2';
+const CACHE_NAME = 'desi-street-brawler-v3';
 const APP_SHELL = [
   '/DesiStreetFighterV2/',
   '/DesiStreetFighterV2/index.html',
